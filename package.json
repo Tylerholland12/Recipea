@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/register": "^7.13.8",
     "@handlebars/allow-prototype-access": "^1.0.3",
     "babel-cli": "^6.26.0",
     "bcryptjs": "^2.4.3",
@@ -22,10 +25,12 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
     "express-validator": "^6.10.0",
+    "gh-pages": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
     "mocha": "^8.3.1",
     "mongoose": "^5.11.19",
     "nodemon": "^2.0.7",
     "spoonacular_api": "^1.0.0"
-  }
+  },
+  "homepage": "http://Tylerholland12.github.io/Recipea"
 }
