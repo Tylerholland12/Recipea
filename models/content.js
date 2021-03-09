@@ -1,4 +1,4 @@
-/* This module exports the Content schema */
+// This module exports the Content schema
 const mongoose = require('mongoose');
 const Populate = require('../utils/autopop');
 
