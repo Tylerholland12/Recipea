@@ -12,7 +12,6 @@ mongoose.connect(
   },
   (err) => {
     assert.strictEqual(null, err);
-    // eslint-disable-next-line no-console
     console.log('Connected successfully to database');
     // _db.close(); // turn on for testing
   },

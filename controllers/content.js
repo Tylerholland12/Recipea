@@ -19,7 +19,6 @@ module.exports = (app) => {
     '/content/create',
     body('title').isString(),
     body('content').isString(),
-    body('priceInWei').isString(),
     (req, res) => {
       if (req.user === null) {
         return res.status(401).send({ message: 'Not Authorised' });
@@ -30,7 +29,6 @@ module.exports = (app) => {
         return res.status(400).render('invalid');
       }
       try {
-        req.body.priceInWei = Number(req.body.priceInWei);
       } catch (error) {
         return res.status(401).send({ message: 'Bad price input.' });
       }
@@ -73,7 +71,6 @@ module.exports = (app) => {
     '/content/:id/update',
     body('title').isString(),
     body('content').isString(),
-    body('priceInWei').isInt(),
     (req, res) => {
       if (req.user === null) {
         return res.redirect('/');
