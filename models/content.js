@@ -5,11 +5,11 @@ const Populate = require('../utils/autopop');
 const { Schema } = mongoose;
 
 const ContentSchema = new Schema({
-  createdAt: { type: Date },
-  updatedAt: { type: Date },
   title: { type: String, required: true },
   content: { type: String, required: true },
   author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  createdAt: { type: Date },
+  updatedAt: { type: Date },
 }, { timestamps: { createdAt: 'created_at' } });
 
 ContentSchema
