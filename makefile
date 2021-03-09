@@ -21,5 +21,6 @@ deps:
 run:
 	npm start
 
+# Test all files
 test:
 	node tests/index.test.js
